@@ -78,7 +78,7 @@ Esta sección describe el uso básico de la interfaz de la aplicación:
 
 ## 🚀 Cómo Ejecutar el Proyecto
 
-1.  **Clonar el Repositorio:**
+1.  **Clonar el Repositorio:** Abre tu terminal, navega a la carpeta donde deseas guardar el proyecto y usa el siguente comando.
     ```bash
     git clone https://github.com/amedtorres/GestionReservasVehiculos-JavaFX.git
     ```
