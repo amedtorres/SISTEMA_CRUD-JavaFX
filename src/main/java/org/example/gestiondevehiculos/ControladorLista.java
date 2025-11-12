@@ -56,7 +56,7 @@ public class ControladorLista implements Initializable {
     //ELIMINAR RESERVA
     @FXML
     private void eliminarReserva(ActionEvent event){
-        //comprobar si hay algo para elominar
+        //comprobar si hay algo para eliminar
         if (reservas.isEmpty()) {
             error("no hay reservas para eliminar");
             return;
@@ -68,10 +68,10 @@ public class ControladorLista implements Initializable {
         txtInput.setHeaderText("Eliminar reserva por nombre de cliente");
         txtInput.setContentText("Introduce el nombre del cliente:");
 
-        // mostrar el diálogo y esperar a q
+        // mostrar el diálogo y esperar
         Optional <String> resultado = txtInput.showAndWait();
 
-        // si el usuario ingresa algo y acepta entra en este if
+        // si el usuario ingresa algo y acepta, entra en este if
         if (resultado.isPresent()){
             String nombreBuscado = resultado.get().trim();
 
@@ -88,7 +88,7 @@ public class ControladorLista implements Initializable {
                 }
             }
 
-            // Si se encontro eliminarla
+            // Si se encontro, eliminarla
             if (reservaEncontrada != null) {
                 reservas.remove(reservaEncontrada);
                 mostrarReservas(); // muestra con la lista actualiada
@@ -109,7 +109,7 @@ public class ControladorLista implements Initializable {
     }
 
 
-    // metodo para lanzar error
+    // metodo para lanzar mensaje de error
     public void error(String mensaje){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -118,7 +118,7 @@ public class ControladorLista implements Initializable {
         alert.showAndWait();
     }
 
-    // metodo para lanzar error
+    // metodo para lanzar mensaje informativo
     public void info(String mensaje){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("INFORMACION");

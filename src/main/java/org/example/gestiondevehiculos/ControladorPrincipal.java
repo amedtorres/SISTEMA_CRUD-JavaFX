@@ -82,7 +82,7 @@ public class ControladorPrincipal implements Initializable {
             LocalDate fecha = dpFecha.getValue();
             int horas = spnHorasUso.getValue();
 
-            // validar
+            // Validación
             if (nombre.isEmpty() || !nombre.matches("[a-zA-Z]*")) {
                 error("El campo nombre no puede estar vacio ni con caracteres invalidos");
                 return;
@@ -101,7 +101,7 @@ public class ControladorPrincipal implements Initializable {
                 return;
             }
 
-            // obtenemos el tipo de carga seleecionado y añadmos el precio por hora
+            // obtenemos el tipo de carga seleecionado y añadimos el precio por hora
             String tipoCarga;
             double precioHora;
 
@@ -117,7 +117,7 @@ public class ControladorPrincipal implements Initializable {
             //calcular precio total de la reserva
             double precioTotal = precioHora * horas;
 
-            // crear nuevo objeto
+            // crear nuevo objeto Reserva
             Reserva reserva = new Reserva(nombre, vehiculo, fecha, horas, tipoCarga, precioTotal);
 
             //añadimos reserva
@@ -156,7 +156,7 @@ public class ControladorPrincipal implements Initializable {
             // selecciono y cargo el controlador
             ControladorLista controlador = loader.getController();
 
-            //paso la lista al controlador listado
+            //paso la lista al controlador lista
             controlador.setReservas(reservas);
 
             // creo ventana modal
@@ -180,7 +180,7 @@ public class ControladorPrincipal implements Initializable {
         alert.showAndWait();
     }
 
-    // metodo para lanzar error
+    // metodo para lanzar mensaje de información
     public void info(String mensaje){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("INFORMACION");
