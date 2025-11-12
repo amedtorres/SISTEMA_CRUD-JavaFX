@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="429.0" prefWidth="719.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.gestiondevehiculos.ControladorPrincipal"
+      stylesheets="@style.css">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane prefHeight="404.0" prefWidth="708.0">
+      <children>
+         <Label layoutX="277.0" layoutY="21.0" prefHeight="19.0" prefWidth="140.0" text="Registro de Vehiculos" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font></Label>
+         <Label layoutX="25.0" layoutY="70.0" text="Nombre" />
+         <TextField fx:id="tfNombre" layoutX="135.0" layoutY="65.0" prefHeight="26.0" prefWidth="185.0" />
+
+         <Label layoutX="24.0" layoutY="113.0" text="Vehiculo" />
+         <ComboBox fx:id="comboVehiculo" layoutX="135.0" layoutY="108.0" prefHeight="26.0" prefWidth="185.0" />
+
+         <Label layoutX="25.0" layoutY="165.0" text="Fecha" />
+         <DatePicker fx:id="dpFecha" layoutX="132.0" layoutY="160.0" />
+
+         <Label layoutX="25.0" layoutY="210.0" text="Horas de uso" />
+         <Spinner fx:id="spnHorasUso" layoutX="135.0" layoutY="205.0" prefHeight="26.0" prefWidth="185.0" />
+
+         <Label layoutX="24.0" layoutY="263.0" text="Tipo de carga" />
+         <RadioButton fx:id="rbCargaLenta" layoutX="135.0" layoutY="263.0" mnemonicParsing="false" text="Carga Lenta" />
+
+         <RadioButton fx:id="rbCargaRapida" layoutX="249.0" layoutY="263.0" mnemonicParsing="false" text="Carga Rapida" />
+         <TextArea fx:id="txtResult" layoutX="417.0" layoutY="59.0" prefHeight="212.0" prefWidth="225.0" />
+
+         <Button fx:id="btnRgistrar" layoutX="59.0" layoutY="328.0" mnemonicParsing="false" onAction="#registrarReserva" text="REGISTRAR RESERVA" textFill="#09ab00">
+          <tooltip>
+              <Tooltip text="Registra y calcula el valor/precio total de la reserva de vehículos." />
+          </tooltip>
+         </Button>
+
+         <Button fx:id="btnVer" layoutX="477.0" layoutY="328.0" mnemonicParsing="false" onAction="#verListado" text="VER RESERVAS" textFill="#0080ff" />
+      </children>
+   </Pane>
+</VBox>

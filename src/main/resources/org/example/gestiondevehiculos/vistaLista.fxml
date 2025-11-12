@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="497.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.gestiondevehiculos.ControladorLista"
+            stylesheets="@style.css">
+   <children>
+      <Label layoutX="237.0" layoutY="48.0" text="Listado de Reservas" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtListaReservas" layoutX="62.0" layoutY="88.0" prefHeight="288.0" prefWidth="467.0" />
+      <Button fx:id="btnEliminar" layoutX="384.0" layoutY="416.0" mnemonicParsing="false" onAction="#eliminarReserva" text="ELIMINAR" textFill="#e80505" />
+      <Button fx:id="btnSalir" layoutX="140.0" layoutY="416.0" mnemonicParsing="false" onAction="#salir" text="SALIR" textFill="#0080ff" />
+   </children>
+</AnchorPane>

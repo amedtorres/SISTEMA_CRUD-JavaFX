@@ -1,0 +1,97 @@
+
+.root {
+    /* Color de Fondo Principal de la aplicación (Gris muy claro/Blanco roto) */
+    -fx-base-background: #F0F2F5;
+
+    /* Colores de los Botones */
+    -fx-color-registrar: #6CA537; /* Verde Oliva del botón REGISTRAR */
+    -fx-color-secundario: #58A0DC; /* Azul del botón VER RESERVAS / SALIR */
+    -fx-color-eliminar: #D44D4D; /* Rojo del botón ELIMINAR RESERVA */
+
+    /* Color de Texto */
+    -fx-text-color: #333333;
+}
+
+
+/* ESTILO GLOBAL Y PANELES (Contenedor principal)   */
+.vbox, .anchor-pane {
+    -fx-background-color: -fx-base-background;
+}
+
+/* El Pane (los controles) */
+.pane {
+    -fx-background-color: white; /* Panel principal interior, Blanco Puro */
+    -fx-padding: 30px;
+    -fx-background-radius: 4px; /* Bordes ligeramente redondeados */
+    /* Sombra sutil y definida, imitando el estilo de tarjeta de la imagen */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0.0, 0, 0);
+}
+
+/* ESTILO DE CAMPOS DE TEXTO Y ENTRADAS             */
+.text-field, .combo-box, .date-picker, .spinner {
+    -fx-background-color: white;
+    -fx-border-color: #CCCCCC; /* Borde gris muy claro */
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: -fx-text-color;
+}
+.text-field:focused {
+    /* Resalta ligeramente el campo al enfocarse */
+    -fx-border-color: #AAAAAA;
+}
+
+/* Área de Texto (Para Listado y Resumen) */
+.text-area {
+    -fx-background-color: #F7F7F7; /* Un gris muy tenue como en el resumen */
+    -fx-border-color: #DDDDDD;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: -fx-text-color;
+    -fx-font-family: "Monospaced";
+}
+.text-area .content {
+    -fx-background-color: #F7F7F7;
+}
+
+/* ESTILO DE ETIQUETAS (Labels)  */
+.label {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 13px;
+}
+
+/* Títulos principales (REGISTRO DE VEHÍCULOS, Listado de Reservas) */
+.label.header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+/* ESTILO DE BOTONES (Colores y Formas ) */
+.button {
+    -fx-background-radius: 4px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 18px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0.0, 1, 1);
+}
+
+/* Botón REGISTRAR (Verde Oliva) */
+.button#btnRgistrar {
+    -fx-background-color: -fx-color-registrar;
+}
+
+/* Botones Azules (VER RESERVAS / SALIR) */
+.button#btnVer, .button#btnSalir {
+    -fx-background-color: -fx-color-secundario;
+}
+
+/* Botón ELIMINAR (Rojo) */
+.button#btnEliminar {
+    -fx-background-color: -fx-color-eliminar;
+}
+
+/* Efecto Hover (mínimo cambio de color) */
+.button:hover {
+    -fx-opacity: 0.95;
+}
