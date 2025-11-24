@@ -8,50 +8,37 @@
 
 ## Resumen del Proyecto
 
-Este proyecto es un **Simulador de Gestión de Reservas de Vehículos** desarrollado íntegramente con **JavaFX**. Su objetivo principal es demostrar la comprensión de la **Programación Orientada a Objetos (POO)**, el manejo de colecciones y la interacción entre la lógica del negocio (Java) y la interfaz de usuario (FXML).
-
-La aplicación permite a un usuario **registrar** nuevas reservas, **calcular** automáticamente el costo, **visualizar** un listado de entradas activas y **eliminar** registros existentes de forma robusta.
+Este es un Simulador de Gestión de Reservas de Vehículos creado con JavaFX y Java 17+ como proyecto estudiantil. El objetivo principal es demostrar la aplicación de la Programación Orientada a Objetos (POO) y la implementación de una interfaz de usuario limpia y funcional.
 
 ---
 
 ## Características y Funcionalidades
 
-El sistema implementa las funcionalidades básicas de gestión (CRUD parcial) con foco en la usabilidad y la robustez de la entrada de datos:
+El sistema implementa las funcionalidades básicas de gestión de CRUD parcial con foco en la usabilidad y la robustez de la entrada de datos:
 
-### 1. Registro y Cálculo
-* **Modelo POO:** Utiliza la clase `Reserva` para modelar y almacenar los datos de cada entrada.
-* **Validación de Datos:** Valida campos esenciales (Nombre, Vehículo, Fecha) antes del registro.
-* **Cálculo Automático:** Determina el **Precio Total** de la reserva basándose en las horas de uso y el tipo de carga seleccionado (Lenta: 10.0€/h o Rápida: 15.0€/h).
+* **Registro (Create):** Permite ingresar datos de la reserva (Nombre, Vehículo, Fecha y Horas).
 
-### 2. Listado y Gestión
-* **Ventana Modal:** Muestra todas las reservas activas en una ventana separada (`listadoVista.fxml`).
-* **Eliminación Robusta:** Permite eliminar una reserva buscando por el nombre del cliente. La búsqueda utiliza `String.equalsIgnoreCase()` para ser tolerante a mayúsculas/minúsculas y `String.trim()` para ignorar espacios sobrantes.
-* **Feedback al Usuario:** Implementa alertas informativas y de error (`Alerts`) para guiar la operación.
+* **Cálculo Automático:** Determina el Precio Total según las horas y el tipo de carga seleccionado.
 
-### 3. Diseño y Estilo
+* **Listado (Read):** Muestra todas las reservas activas en una ventana modal separada.
+
+* **Eliminación (Delete):** Permite borrar reservas buscando por el nombre del cliente. La búsqueda es robusta ignora mayúsculas/minúsculas y espacios.
+
+### Diseño y Estilo
 * **Diseño Minimalista:** La interfaz está estilizada con **CSS personalizado**, replicando un **diseño plano y limpio** con un fondo sutilmente cálido para mejorar la estética.
 * **Tooltips:** Implementados en los botones principales para mejorar la guía del usuario (UX).
 
 ---
 
-## 🛠️ Tecnologías y Estructura
+## Tecnologías y Estructura
 
 * **Lenguaje:** Java 17+
 * **Framework de UI:** JavaFX
 * **Diseño de Layout:** FXML
-* **Estilismo:** CSS (Estilo de la interfaz en `estilos.css`)
-
-### Estructura de Clases
-
-Clase | Función Principal |
-| :--- | :--- |
-| `ReservasApplication.java` | ***Punto de Entrada (main)***: Inicializa la aplicación JavaFX y carga la vista principal (vistaPrincipal.fxml). |
-| `Reserva.java` | **Modelo POO:** Define la estructura de datos. |
-| `ControladorPrincipal.java` | **Controlador:** Gestiona la creación de reservas, validaciones y cálculos de precio. |
-| `ControladorLista.java` | **Controlador:** Gestiona la visualización, la búsqueda y la eliminación de reservas. |
+* **Estilo de la interfaz:** CSS
 
 ---
-## � Guía de Funcionamiento para el Usuario
+## Guía de Funcionamiento para el Usuario
 
 Esta sección describe el uso básico de la interfaz de la aplicación:
 
@@ -71,8 +58,6 @@ Esta sección describe el uso básico de la interfaz de la aplicación:
 | **Listado de Reservas** | Muestra todas las reservas activas en la memoria, separadas por líneas de guiones (`---`). |
 | **ELIMINAR RESERVA** | Abre un diálogo para que el usuario escriba el **nombre exacto** del cliente a eliminar. Si lo encuentra, la reserva es borrada de la lista y el listado se actualiza. |
 | **SALIR** | Cierra la ventana del listado y vuelve a la ventana de registro. |
-
-*(Nota: La lista de reservas se mantiene en la memoria mientras la aplicación está abierta. Al cerrar la aplicación, la lista se reinicia.)*
 
 ---
 
